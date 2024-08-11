@@ -20,10 +20,12 @@ public class StudentController {
         public StudentDTO getById(@PathVariable Long id){
             return asStudentDTO(student);
     }
+
     @GetMapping("${apiPrefix}/")
         public List<StudentDTO> getAll(){
             return  List<StudentDTO>
     }
+
     @PostMapping("{apiPrefix}/")
         public ResponseEntity<StudentDTO> create(@RequestBody StudentDTO student){
             if(isNull(student.getId()) ||
@@ -41,10 +43,12 @@ public class StudentController {
                 return ResponseEntity.ok(createdStudent);
             }
     }
+
     @PutMapping("${apiPrefix}/{id}")
         public StudentDTO updateById(@PathVariable Long id){
             return asStudentDTO(student)
     }
+
     @DeleteMapping("${apiPrefix}/{id}")
         public Long deleteById(@PathVariable Long id){
             return studentId
