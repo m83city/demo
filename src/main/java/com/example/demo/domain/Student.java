@@ -8,7 +8,7 @@ import lombok.Data;
 public class Student {
     private Long id;
     private String name;
-    private String secondName;
+    private String second_name;
     private Integer age;
     private Integer course;
 };

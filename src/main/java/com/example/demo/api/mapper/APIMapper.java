@@ -4,13 +4,13 @@ import com.example.demo.api.dto.StudentDTO;
 import com.example.demo.domain.Student;
 
 public class APIMapper {
-    public static StudentDTO asStudentDTO (Student student) {
+    public static StudentDTO   asStudentDTO (Student student) {
         return StudentDTO.builder()
-                .id(student.getId())
+                .id(student.getId())//ex
                 .age(student.getAge())
                 .course(student.getCourse())
                 .name(student.getName())
-                .secondName(student.getSecondName())
+                .second_name(student.getSecond_name())
                 .build();
     }
     public static Student asStudent(StudentDTO studentDTO){
@@ -19,7 +19,7 @@ public class APIMapper {
                 .age(studentDTO.getAge())
                 .course(studentDTO.getCourse())
                 .name(studentDTO.getName())
-                .secondName(studentDTO.getSecondName())
+                .second_name(studentDTO.getSecond_name())
                 .build();
     }
 }

@@ -7,7 +7,7 @@ import lombok.*;
 public class StudentDTO {
     private Long id;
     private String name;
-    private String secondName;
+    private String second_name;
     private Integer age;
     private Integer course;
 }
