@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class StudentService {
-  private final StudentJPARepository studentJPARepository;
-  private final StudentRepositoryImplementation studentRepositoryImplementation;
+    private final StudentJPARepository studentJPARepository;
+    private final StudentRepositoryImplementation studentRepositoryImplementation;
 
-  public Student create (Student student) {
-    return studentRepositoryImplementation.create(student);
-  }
+    public Student create(Student student) {
+        return studentRepositoryImplementation.create(student);
+    }
 }

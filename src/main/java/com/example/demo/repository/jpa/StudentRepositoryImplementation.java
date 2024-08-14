@@ -14,8 +14,8 @@ import static com.example.demo.repository.mapper.StudentRepositoryMapper.asStude
 public class StudentRepositoryImplementation {
     private final StudentJPARepository studentJPARepository;
 
-    public Student create (Student student){
+    public Student create(Student student) {
         StudentEntity createNewRecord = studentJPARepository.save(asStudentEntity(student));
-       return  asStudent(createNewRecord);
+        return asStudent(createNewRecord);
     }
 }

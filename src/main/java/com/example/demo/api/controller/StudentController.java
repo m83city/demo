@@ -19,10 +19,10 @@ public class StudentController {
     private final StudentService studentService;
 
     @PostMapping("/student")
-        public ResponseEntity<StudentDTO> create(@RequestBody StudentDTO student){
+    public ResponseEntity<StudentDTO> create(@RequestBody StudentDTO student) {
         Student createStudent = studentService.create(asStudent(student));
         StudentDTO responseMapping = asStudentDTO(createStudent);
-                return ResponseEntity.ok(responseMapping);
-            }
+        return ResponseEntity.ok(responseMapping);
     }
+}
 
